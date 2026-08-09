@@ -4,7 +4,6 @@
 
 ### An End-to-End Object Detection Pipeline — EDA → Training → Evaluation → Model Comparison
 
-**Author:** [SiriNandinii](https://github.com/SiriNandinii)
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Ultralytics YOLO11](https://img.shields.io/badge/Ultralytics-YOLO11-00FFFF?style=for-the-badge&logo=yolo&logoColor=white)](https://github.com/ultralytics/ultralytics)
@@ -14,10 +13,6 @@
 [![Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![Kaggle Dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white)](https://www.kaggle.com)
 [![Roboflow](https://img.shields.io/badge/Source-Roboflow-6706CE?style=flat-square&logo=roboflow&logoColor=white)](https://roboflow.com)
-[![GitHub last commit](https://img.shields.io/github/last-commit/SiriNandinii/container-damage-yolo?style=flat-square)](https://github.com/SiriNandinii/container-damage-yolo/commits/main)
-[![GitHub stars](https://img.shields.io/github/stars/SiriNandinii/container-damage-yolo?style=flat-square&logo=github)](https://github.com/SiriNandinii/container-damage-yolo/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/SiriNandinii/container-damage-yolo?style=flat-square&logo=github)](https://github.com/SiriNandinii/container-damage-yolo/issues)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SiriNandinii/container-damage-yolo/blob/main/damaged.ipynb)
 
 </div>
 
@@ -122,35 +117,7 @@ flowchart LR
     style OUT fill:#C0392B,color:#fff
 ```
 
-### Class Distribution (Entity-Relationship View)
 
-```mermaid
-erDiagram
-    DATASET ||--o{ IMAGE : contains
-    IMAGE ||--o{ ANNOTATION : has
-    ANNOTATION }o--|| CLASS : "belongs to"
-
-    DATASET {
-        int total_images "680"
-        int total_annotations "1040"
-        string license "CC BY 4.0"
-    }
-    IMAGE {
-        string format "JPEG"
-        int channels "3 (RGB)"
-        string resolution "640x640 or 1024x1024"
-    }
-    ANNOTATION {
-        float x_center
-        float y_center
-        float width
-        float height
-    }
-    CLASS {
-        string name
-        float percentage
-    }
-```
 
 ---
 
@@ -203,13 +170,13 @@ Container damaged parts detection dataset/
 <td width="50%">
 
 **Dataset statistics (format / resolution / aspect ratio)**
-<img src="assets/phase05_dataset_stats.png" width="100%">
+<img src="assets/assets/phase05_dataset_stats.png" width="100%">
 
 </td>
 <td width="50%">
 
 **Class distribution (counts + proportion)**
-<img src="assets/phase06_class_distribution.png" width="100%">
+<img src="assets/assets/phase06_class_distribution.png" width="100%">
 
 </td>
 </tr>
@@ -217,13 +184,13 @@ Container damaged parts detection dataset/
 <td width="50%">
 
 **Class distribution across splits**
-<img src="assets/phase06_split_class_distribution.png" width="100%">
+<img src="assets/assets/phase06_split_class_distribution.png" width="100%">
 
 </td>
 <td width="50%">
 
 **Bounding-box geometry (width / height / area)**
-<img src="assets/phase07_bbox_geometry.png" width="100%">
+<img src="assets/assets/phase07_bbox_geometry.png" width="100%">
 
 </td>
 </tr>
@@ -231,13 +198,13 @@ Container damaged parts detection dataset/
 <td width="50%">
 
 **Object size category (small / medium / large)**
-<img src="assets/phase07_size_category.png" width="100%">
+<img src="assets/assets/phase07_size_category.png" width="100%">
 
 </td>
 <td width="50%">
 
 **Spatial density heatmap per class**
-<img src="assets/phase07_spatial_heatmap.png" width="100%">
+<img src="assets/assets/phase07_spatial_heatmap.png" width="100%">
 
 </td>
 </tr>
@@ -245,13 +212,13 @@ Container damaged parts detection dataset/
 <td width="50%">
 
 **Instances per image**
-<img src="assets/phase08_instances_per_image.png" width="100%">
+<img src="assets/assets/phase08_instances_per_image.png" width="100%">
 
 </td>
 <td width="50%">
 
 **Ground-truth samples with bounding boxes**
-<img src="assets/phase09_sample_gt_boxes.png" width="100%">
+<img src="assets/assets/phase09_sample_gt_boxes.png" width="100%">
 
 </td>
 </tr>
@@ -259,7 +226,7 @@ Container damaged parts detection dataset/
 
 **Augmentation preview** (illustrative — flip / HSV jitter / rotation / blur):
 
-<img src="assets/phase10_augmentation_preview.png" width="100%">
+<img src="assets/assets/phase10_augmentation_preview.png" width="100%">
 
 ---
 
@@ -290,7 +257,7 @@ gantt
 
 **Training curves** (validation box loss & mAP50-95 over epochs, all 3 models overlaid):
 
-<img src="assets/phase17_training_curves.png" width="100%">
+<img src="assets/assets/phase17_training_curves.png" width="100%">
 
 ---
 
@@ -298,11 +265,11 @@ gantt
 
 ### Overall Metrics
 
-<img src="assets/phase17_overall_metrics_comparison.png" width="100%">
+<img src="assets/assets/phase17_overall_metrics_comparison.png" width="100%">
 
 ### Per-Class AP@50
 
-<img src="assets/phase17_per_class_ap50_comparison.png" width="100%">
+<img src="assets/assets/phase17_per_class_ap50_comparison.png" width="100%">
 
 | Model | AP50 Dent | AP50 Hole | AP50 Deframe | AP50-95 Dent | AP50-95 Hole | AP50-95 Deframe |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -312,25 +279,25 @@ gantt
 
 ### Accuracy vs. Efficiency Frontier
 
-<img src="assets/phase17_efficiency_frontier.png" width="100%">
+<img src="assets/assets/phase17_efficiency_frontier.png" width="100%">
 
 > YOLO11s sits at the sweet spot — near-YOLO11m accuracy at less than half the parameter count and 3× faster inference than YOLO11m.
 
 ### Confusion Matrices (Test Set)
 
-<img src="assets/phase18_confusion_matrices.png" width="100%">
+<img src="assets/assets/phase18_confusion_matrices.png" width="100%">
 
 ### Precision–Recall Curves (Test Set)
 
-<img src="assets/phase19_pr_curves.png" width="100%">
+<img src="assets/assets/phase19_pr_curves.png" width="100%">
 
 ### Qualitative Inference — Side-by-Side
 
-<img src="assets/phase20_qualitative_comparison.png" width="100%">
+<img src="assets/assets/phase20_qualitative_comparison.png" width="100%">
 
 ### Error Analysis
 
-<img src="assets/phase21_error_analysis.png" width="100%">
+<img src="assets/assets/phase21_error_analysis.png" width="100%">
 
 | Model | Class | Precision | Recall | Missed-Detection (1-Recall) | False-Positive (1-Precision) |
 |---|---|:---:|:---:|:---:|:---:|
@@ -479,22 +446,6 @@ results[0].show()
 
 ---
 
-## 📜 Citation
-
-If you use this work, please cite:
-
-```bibtex
-@misc{sirinandinii2026containerdamage,
-  author       = {SiriNandinii},
-  title        = {Shipping Container Damage Detection using YOLO11},
-  year         = {2026},
-  howpublished = {\url{https://github.com/SiriNandinii/container-damage-yolo}}
-}
-```
-
-Dataset credit: *Container Damaged Parts Detection Dataset*, Roboflow (CC BY 4.0).
-
----
 
 ## 📄 License
 
