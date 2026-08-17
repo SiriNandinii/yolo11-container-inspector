@@ -34,7 +34,7 @@ Given an image, the model answers two questions simultaneously — **what** dama
 
 ---
 
-## 🏆 Headline Result
+## 🏆 Headline Result.
 
 > **YOLO11s wins on accuracy** (`mAP50-95 = 0.845`) while staying **~2× smaller and faster** than YOLO11m — the best accuracy-per-parameter trade-off of the three.
 
