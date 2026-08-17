@@ -18,7 +18,7 @@
 
 ---
 
-## 🧭 Overview
+## 🧭 Overview.
 
 Shipping containers take a beating in transit — repeated handling, weather exposure, and stacking stress leave them **dented, punctured, and structurally deformed**. Manual inspection is slow, subjective, and doesn't scale.
 
